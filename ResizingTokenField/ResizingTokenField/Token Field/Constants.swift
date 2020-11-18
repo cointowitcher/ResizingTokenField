@@ -22,8 +22,8 @@ struct Constants {
         static let textFieldCellMinWidth: CGFloat = 60
         static let labelTextColor: UIColor = .darkText
         static let textFieldTextColor: UIColor = .darkText
-        static let defaultTokenTopBottomPadding: CGFloat = 4
-        static let defaultTokenLeftRightPadding: CGFloat = 8
+        static let defaultTokenTopBottomPadding: CGFloat = 2
+        static let defaultTokenLeftRightPadding: CGFloat = 12
         static let defaultTokenCellConfiguration: DefaultTokenCellConfiguration = DefaultTokenCellInitialConfiguration()
     }
     
@@ -54,5 +54,8 @@ private struct DefaultTokenCellInitialConfiguration: DefaultTokenCellConfigurati
     
     func backgroundColor(forSelected isSelected: Bool) -> UIColor {
         return isSelected ? .gray : .lightGray
+    }
+    func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve {
+        .continuous
     }
 }

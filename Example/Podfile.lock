@@ -1,5 +1,5 @@
 PODS:
-  - ResizingTokenField (0.1.0)
+  - ResizingTokenField (0.1.1)
 
 DEPENDENCIES:
   - ResizingTokenField (from `../`)
@@ -9,8 +9,8 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ResizingTokenField: 352e0dc15bc0d5918ed2527cca324ef018e09c1c
+  ResizingTokenField: 2541724726b652a9584d2501ac21d1682e7d034d
 
 PODFILE CHECKSUM: 7958dfeada7c8ae5b245813523ac36fad5139c4b
 
-COCOAPODS: 1.7.3
+COCOAPODS: 1.10.0

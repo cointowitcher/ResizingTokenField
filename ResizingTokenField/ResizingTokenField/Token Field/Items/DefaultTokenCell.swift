@@ -10,6 +10,7 @@ import UIKit
 
 protocol DefaultTokenCellConfiguration {
     func cornerRadius(forSelected isSelected: Bool) -> CGFloat
+    func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve
     func borderWidth(forSelected isSelected: Bool) -> CGFloat
     func borderColor(forSelected isSelected: Bool) -> CGColor
     func textColor(forSelected isSelected: Bool) -> UIColor
@@ -53,6 +54,7 @@ class DefaultTokenCell: ResizingTokenFieldTokenCell {
         layer.cornerRadius = configuration.cornerRadius(forSelected: isSelected)
         layer.borderWidth = configuration.borderWidth(forSelected: isSelected)
         layer.borderColor = configuration.borderColor(forSelected: isSelected)
+        layer.cornerCurve = configuration.cornerCurve(forSelected: isSelected)
         backgroundColor = configuration.backgroundColor(forSelected: isSelected)
         titleLabel.textColor = configuration.textColor(forSelected: isSelected)
     }
