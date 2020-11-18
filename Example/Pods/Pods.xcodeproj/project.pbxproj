@@ -7,37 +7,37 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00C26410E8BADBAE4DBB6DDC8FA12222 /* ResizingTokenFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 411A4BC60F30150861BCE265EF9C7594 /* ResizingTokenFieldDelegate.swift */; };
-		086AC266F23BB989D3E02437C40C2547 /* ResizingTokenFieldTokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F32157344A6364E5B3A32FC1F591186D /* ResizingTokenFieldTokenCell.swift */; };
-		3DF35520071EFD903110FC2EBAA90044 /* ResizingTokenFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E38D7D2C3E6ED3BFF2BC4D213BF69D7A /* ResizingTokenFieldViewModel.swift */; };
-		457B0FDAA1F1C6D8D4B549B28C2F1818 /* ResizingTokenField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 30499872386452C37E4F4DFCCB384776 /* ResizingTokenField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		46CE6B41F75AE8AEBF2382A6C7310A26 /* DefaultTokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE61825F9F03AF469FC4821A9CCD44DD /* DefaultTokenCell.swift */; };
+		07DF89EE36D3065A0E4AFFD04BE75586 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 192A73097D615751B6ECA0A5BF9C9CD8 /* Constants.swift */; };
+		199CA7F90BD5B01E088CD2070120346A /* ResizingTokenField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 16C1650806FC1BC18236E9BF64540A4C /* ResizingTokenField-dummy.m */; };
+		2685E6B253014877B7800459E117C98F /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F88CCD75F88DAFB139474817808B748 /* LabelCell.swift */; };
+		27C7AAD042256107855D24E83BD7271F /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2685E396C7B80DCEB3E66655BEBF6286 /* TextFieldCell.swift */; };
+		3C905FFE60AF99420ABF71F61CA33D14 /* ResizingTokenFieldViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3361F4B69D1409EDF8C3FB7C5AEC29F /* ResizingTokenFieldViewModel.swift */; };
+		457B0FDAA1F1C6D8D4B549B28C2F1818 /* ResizingTokenField-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 53F4CD0190295DB54BF38531A9ACFF5E /* ResizingTokenField-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		47F8FF44FD3654A5A3D784F983698D07 /* Pods-ResizingTokenField_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = D2DC6B6DB90402F85991636D3C4B2ABC /* Pods-ResizingTokenField_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		51F11BDFF84676CB36F18CC1D859B02C /* TextFieldCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6C7DC07415E6B2746D60F70BC5C15E4 /* TextFieldCell.swift */; };
 		5FC73D12F7D6DF4F7C18CEC3111DFB17 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		6DD7DC7794DEF5D4D3C8EBD0BBF963E2 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 14452E5C5D1BA4398A296057B9DB56BC /* Constants.swift */; };
+		7CFAAF4C3246668102D18F46B81634E6 /* ResizingTokenFieldFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 87E9F38FAEB430BB17B67645ED9158AC /* ResizingTokenFieldFlowLayout.swift */; };
 		84CA4FC1BDDE54C311201E5076057516 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
 		8685D718CF1C0D003998750B6EEA8FB3 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */; };
-		9BE3923894AE5E2CC92A2A274D3596C2 /* ResizingTokenFieldToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29C6A886B564D1FA29565E2FBFB8BA67 /* ResizingTokenFieldToken.swift */; };
-		A5BCA45F556B0776D22F9166950CF3CE /* ResizingTokenFieldFlowLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C8646BD6A20437B99EE34E9EAC8F3B9 /* ResizingTokenFieldFlowLayout.swift */; };
+		9F5ADD06B141A82A44E4EAB9EA34D34A /* ResizingTokenField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6FCE209E3EBCF0D1FB6C0B48809FE141 /* ResizingTokenField.swift */; };
+		A854D9A23108CB83EC54AD6E7B4C6CA8 /* ResizingTokenFieldTokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6F6C8DEFB9B1CADC2EC900465BBED853 /* ResizingTokenFieldTokenCell.swift */; };
+		A90201DA92E6E2FAC55A17C70254B54D /* DefaultTokenCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE45910385B35D7442F1BE8A3157E79F /* DefaultTokenCell.swift */; };
 		AA3E3ADC45D204B0646D2EB07BB63993 /* Pods-ResizingTokenField_Example-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 61DFF064DF00497393BDB1DC07A5F894 /* Pods-ResizingTokenField_Example-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		B1FEBFD251A590159795780851BAE59C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */; };
-		C6664B31871409C7F8E8ADB23A267AD9 /* LabelCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5815D2FA9A8DC0AB7C382A634AA7EC38 /* LabelCell.swift */; };
-		C95FEB984C0B07CE1F3DDFE3BA060BA3 /* ResizingTokenField-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = F06D40EBB6981649ED7E27EE93C946FC /* ResizingTokenField-dummy.m */; };
-		D20E065580BB4D51B1A01BCE6516DA76 /* ResizingTokenField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C6BF700C9F163A47E343B274F82AD2A /* ResizingTokenField.swift */; };
+		BFB5BCB589A6EAAB7AD4A2DBA853BA56 /* ResizingTokenFieldDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B90CDA0C89648B3603F7C51E84A31019 /* ResizingTokenFieldDelegate.swift */; };
 		EF9EE6503631581E9B42C1F2AAA6F647 /* Pods-ResizingTokenField_Example-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6D42B0BE62C7CDD4489D26DF90C861C5 /* Pods-ResizingTokenField_Example-dummy.m */; };
 		F1CE26CAB312D46241DFDFB81137634F /* Pods-ResizingTokenField_Tests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 457562A2BC47A4B7B8D23B91CC60DED0 /* Pods-ResizingTokenField_Tests-dummy.m */; };
+		FA0451D17F2B6139B58BC99DBE6CFD25 /* ResizingTokenFieldToken.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6AA47983813B8F669F2FA68F6359BBB9 /* ResizingTokenFieldToken.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		B24B5998FFC0D5DC65489953B1605F2B /* PBXContainerItemProxy */ = {
+		48A128A38683B3F42F9950A69D1D75F3 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 8129ADE45CA6E8216152B5D2F6ADBBB3;
 			remoteInfo = "Pods-ResizingTokenField_Example";
 		};
-		E334E0685CB89948751895FA9B62C7C3 /* PBXContainerItemProxy */ = {
+		B207CDF27AC8EBAEEABDEC3CAAE27E0E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -47,49 +47,46 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0105E504D3829CD4EEC8009A035502F3 /* ResizingTokenField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ResizingTokenField.debug.xcconfig; sourceTree = "<group>"; };
-		14452E5C5D1BA4398A296057B9DB56BC /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ResizingTokenField/Classes/Constants.swift; sourceTree = "<group>"; };
+		16C1650806FC1BC18236E9BF64540A4C /* ResizingTokenField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ResizingTokenField-dummy.m"; sourceTree = "<group>"; };
+		192A73097D615751B6ECA0A5BF9C9CD8 /* Constants.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ResizingTokenField/Classes/Constants.swift; sourceTree = "<group>"; };
 		218D6E533C512CABD4BBE1FFEA015AF0 /* Pods-ResizingTokenField_Example-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ResizingTokenField_Example-acknowledgements.markdown"; sourceTree = "<group>"; };
 		25534C83BA6C499F19D053BFFF33E623 /* Pods-ResizingTokenField_Example-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ResizingTokenField_Example-Info.plist"; sourceTree = "<group>"; };
-		29C6A886B564D1FA29565E2FBFB8BA67 /* ResizingTokenFieldToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldToken.swift; path = ResizingTokenField/Classes/ResizingTokenFieldToken.swift; sourceTree = "<group>"; };
+		2685E396C7B80DCEB3E66655BEBF6286 /* TextFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextFieldCell.swift; path = ResizingTokenField/Classes/Items/TextFieldCell.swift; sourceTree = "<group>"; };
 		2A470761848D1BC8DF85070F4DCAB0ED /* Pods-ResizingTokenField_Example.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ResizingTokenField_Example.release.xcconfig"; sourceTree = "<group>"; };
 		2C48A33B5706D51145AF0FCCC9C0BA1A /* Pods-ResizingTokenField_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ResizingTokenField_Tests.modulemap"; sourceTree = "<group>"; };
-		2C8646BD6A20437B99EE34E9EAC8F3B9 /* ResizingTokenFieldFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldFlowLayout.swift; path = ResizingTokenField/Classes/ResizingTokenFieldFlowLayout.swift; sourceTree = "<group>"; };
-		30499872386452C37E4F4DFCCB384776 /* ResizingTokenField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ResizingTokenField-umbrella.h"; sourceTree = "<group>"; };
 		3D5DCE9DA59F9AEB61BA28BC3B87A191 /* ResizingTokenField.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ResizingTokenField.framework; path = ResizingTokenField.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		411A4BC60F30150861BCE265EF9C7594 /* ResizingTokenFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldDelegate.swift; path = ResizingTokenField/Classes/ResizingTokenFieldDelegate.swift; sourceTree = "<group>"; };
+		3F88CCD75F88DAFB139474817808B748 /* LabelCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelCell.swift; path = ResizingTokenField/Classes/Items/LabelCell.swift; sourceTree = "<group>"; };
+		4385A693A66DB8C161ED592B70B278B6 /* ResizingTokenField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResizingTokenField-Info.plist"; sourceTree = "<group>"; };
 		457562A2BC47A4B7B8D23B91CC60DED0 /* Pods-ResizingTokenField_Tests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ResizingTokenField_Tests-dummy.m"; sourceTree = "<group>"; };
-		5815D2FA9A8DC0AB7C382A634AA7EC38 /* LabelCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = LabelCell.swift; sourceTree = "<group>"; };
-		59FEFF288AB00509EA0ADAD2D82F6C59 /* ResizingTokenField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ResizingTokenField.modulemap; sourceTree = "<group>"; };
+		4F5DBBB73B283F42F5151D68970F72E6 /* ResizingTokenField.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ResizingTokenField.modulemap; sourceTree = "<group>"; };
+		53F4CD0190295DB54BF38531A9ACFF5E /* ResizingTokenField-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ResizingTokenField-umbrella.h"; sourceTree = "<group>"; };
 		5F01F67C0D80D224B446A2522D83B2E3 /* Pods_ResizingTokenField_Example.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ResizingTokenField_Example.framework; path = "Pods-ResizingTokenField_Example.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		61DFF064DF00497393BDB1DC07A5F894 /* Pods-ResizingTokenField_Example-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ResizingTokenField_Example-umbrella.h"; sourceTree = "<group>"; };
 		6524D01FA17E5074C80FC840D863C0C8 /* Pods-ResizingTokenField_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ResizingTokenField_Tests-Info.plist"; sourceTree = "<group>"; };
+		6AA47983813B8F669F2FA68F6359BBB9 /* ResizingTokenFieldToken.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldToken.swift; path = ResizingTokenField/Classes/ResizingTokenFieldToken.swift; sourceTree = "<group>"; };
 		6D42B0BE62C7CDD4489D26DF90C861C5 /* Pods-ResizingTokenField_Example-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-ResizingTokenField_Example-dummy.m"; sourceTree = "<group>"; };
-		6E47CF42EED1808F6C1D6080929D2294 /* ResizingTokenField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ResizingTokenField.release.xcconfig; sourceTree = "<group>"; };
+		6F6C8DEFB9B1CADC2EC900465BBED853 /* ResizingTokenFieldTokenCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldTokenCell.swift; path = ResizingTokenField/Classes/Items/ResizingTokenFieldTokenCell.swift; sourceTree = "<group>"; };
+		6FCE209E3EBCF0D1FB6C0B48809FE141 /* ResizingTokenField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenField.swift; path = ResizingTokenField/Classes/ResizingTokenField.swift; sourceTree = "<group>"; };
 		774352F1ECFE838500DD6CC627FF111D /* Pods-ResizingTokenField_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ResizingTokenField_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		7B98A2AA08D53716CEFD98C4B514BBBA /* Pods-ResizingTokenField_Example-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-ResizingTokenField_Example-frameworks.sh"; sourceTree = "<group>"; };
-		80DEC4219BD4F156D7401105C7530593 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		8C6BF700C9F163A47E343B274F82AD2A /* ResizingTokenField.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenField.swift; path = ResizingTokenField/Classes/ResizingTokenField.swift; sourceTree = "<group>"; };
+		87E9F38FAEB430BB17B67645ED9158AC /* ResizingTokenFieldFlowLayout.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldFlowLayout.swift; path = ResizingTokenField/Classes/ResizingTokenFieldFlowLayout.swift; sourceTree = "<group>"; };
 		9500C035B5CCC894188EB008B697DDDA /* Pods-ResizingTokenField_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ResizingTokenField_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		9909F33DA43E947198E30EF4E1E394B2 /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		9B08004674B630340F50B6168B74F087 /* ResizingTokenField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ResizingTokenField-prefix.pch"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DE98E7474671270C205E0E6F038E193 /* Pods-ResizingTokenField_Tests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-ResizingTokenField_Tests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		A28B053A58E45F230D7434BB864D6230 /* ResizingTokenField.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ResizingTokenField.debug.xcconfig; sourceTree = "<group>"; };
 		A6A4BC473D2756568F9C81213C26CDDD /* Pods-ResizingTokenField_Tests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ResizingTokenField_Tests-acknowledgements.plist"; sourceTree = "<group>"; };
 		ACDD0DD3A11CF967F9F6D0B418FA6F7D /* Pods-ResizingTokenField_Example.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-ResizingTokenField_Example.debug.xcconfig"; sourceTree = "<group>"; };
+		AE45910385B35D7442F1BE8A3157E79F /* DefaultTokenCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultTokenCell.swift; path = ResizingTokenField/Classes/Items/DefaultTokenCell.swift; sourceTree = "<group>"; };
+		B90CDA0C89648B3603F7C51E84A31019 /* ResizingTokenFieldDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldDelegate.swift; path = ResizingTokenField/Classes/ResizingTokenFieldDelegate.swift; sourceTree = "<group>"; };
 		B968A0FC5E27FC0EB25615A2DB652499 /* Pods-ResizingTokenField_Example.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-ResizingTokenField_Example.modulemap"; sourceTree = "<group>"; };
-		CCC9BBCA9E05078D3A16EAE337EF8DE2 /* ResizingTokenField.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; path = ResizingTokenField.podspec; sourceTree = "<group>"; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		CF9B16C1F36B545398B46DF397BE411D /* ResizingTokenField-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ResizingTokenField-prefix.pch"; sourceTree = "<group>"; };
 		D245E0514AAC1A2B9A6D5EA2F383E90F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		D2DC6B6DB90402F85991636D3C4B2ABC /* Pods-ResizingTokenField_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-ResizingTokenField_Tests-umbrella.h"; sourceTree = "<group>"; };
-		D5D870D07BF366B0BD495BAB92C26245 /* ResizingTokenField-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ResizingTokenField-Info.plist"; sourceTree = "<group>"; };
-		D6C7DC07415E6B2746D60F70BC5C15E4 /* TextFieldCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = TextFieldCell.swift; sourceTree = "<group>"; };
-		E38D7D2C3E6ED3BFF2BC4D213BF69D7A /* ResizingTokenFieldViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldViewModel.swift; path = ResizingTokenField/Classes/ResizingTokenFieldViewModel.swift; sourceTree = "<group>"; };
+		E3361F4B69D1409EDF8C3FB7C5AEC29F /* ResizingTokenFieldViewModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ResizingTokenFieldViewModel.swift; path = ResizingTokenField/Classes/ResizingTokenFieldViewModel.swift; sourceTree = "<group>"; };
 		E6CFAEFACB9AEFB926460858567DB1CB /* Pods_ResizingTokenField_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_ResizingTokenField_Tests.framework; path = "Pods-ResizingTokenField_Tests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
 		EAB6F611E86A4758835A715E4B4184F6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		F06D40EBB6981649ED7E27EE93C946FC /* ResizingTokenField-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ResizingTokenField-dummy.m"; sourceTree = "<group>"; };
-		F32157344A6364E5B3A32FC1F591186D /* ResizingTokenFieldTokenCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ResizingTokenFieldTokenCell.swift; sourceTree = "<group>"; };
+		F128BE5064AF2AA20C77610D19A6B42F /* ResizingTokenField.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ResizingTokenField.release.xcconfig; sourceTree = "<group>"; };
 		F4EDEFA30EA9F2CAE4E422CAD03C3EF3 /* Pods-ResizingTokenField_Example-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-ResizingTokenField_Example-acknowledgements.plist"; sourceTree = "<group>"; };
-		FE61825F9F03AF469FC4821A9CCD44DD /* DefaultTokenCell.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = DefaultTokenCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +118,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		14D57BFF87CE17DEBB362571F02DE3AD /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				32A0B9B57DC25B7B33DDB1D2C4E1AA9A /* ResizingTokenField */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,48 +134,23 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		2038056A13BA58D35CC8CD290C362CCA /* ResizingTokenField */ = {
+		32A0B9B57DC25B7B33DDB1D2C4E1AA9A /* ResizingTokenField */ = {
 			isa = PBXGroup;
 			children = (
-				14452E5C5D1BA4398A296057B9DB56BC /* Constants.swift */,
-				8C6BF700C9F163A47E343B274F82AD2A /* ResizingTokenField.swift */,
-				411A4BC60F30150861BCE265EF9C7594 /* ResizingTokenFieldDelegate.swift */,
-				2C8646BD6A20437B99EE34E9EAC8F3B9 /* ResizingTokenFieldFlowLayout.swift */,
-				29C6A886B564D1FA29565E2FBFB8BA67 /* ResizingTokenFieldToken.swift */,
-				E38D7D2C3E6ED3BFF2BC4D213BF69D7A /* ResizingTokenFieldViewModel.swift */,
-				3BA5442AD37A4B2BF20C95D8711D09AB /* Items */,
-				6EDA4AFDDA9CD89D879B23388EDA52A2 /* Pod */,
-				3298EA0A551E5866E9D05FCCED33D9C0 /* Support Files */,
+				192A73097D615751B6ECA0A5BF9C9CD8 /* Constants.swift */,
+				AE45910385B35D7442F1BE8A3157E79F /* DefaultTokenCell.swift */,
+				3F88CCD75F88DAFB139474817808B748 /* LabelCell.swift */,
+				6FCE209E3EBCF0D1FB6C0B48809FE141 /* ResizingTokenField.swift */,
+				B90CDA0C89648B3603F7C51E84A31019 /* ResizingTokenFieldDelegate.swift */,
+				87E9F38FAEB430BB17B67645ED9158AC /* ResizingTokenFieldFlowLayout.swift */,
+				6AA47983813B8F669F2FA68F6359BBB9 /* ResizingTokenFieldToken.swift */,
+				6F6C8DEFB9B1CADC2EC900465BBED853 /* ResizingTokenFieldTokenCell.swift */,
+				E3361F4B69D1409EDF8C3FB7C5AEC29F /* ResizingTokenFieldViewModel.swift */,
+				2685E396C7B80DCEB3E66655BEBF6286 /* TextFieldCell.swift */,
+				5ACDA95D63E94CBE509759BA2C499BBA /* Support Files */,
 			);
 			name = ResizingTokenField;
-			path = ../..;
-			sourceTree = "<group>";
-		};
-		3298EA0A551E5866E9D05FCCED33D9C0 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				59FEFF288AB00509EA0ADAD2D82F6C59 /* ResizingTokenField.modulemap */,
-				F06D40EBB6981649ED7E27EE93C946FC /* ResizingTokenField-dummy.m */,
-				D5D870D07BF366B0BD495BAB92C26245 /* ResizingTokenField-Info.plist */,
-				CF9B16C1F36B545398B46DF397BE411D /* ResizingTokenField-prefix.pch */,
-				30499872386452C37E4F4DFCCB384776 /* ResizingTokenField-umbrella.h */,
-				0105E504D3829CD4EEC8009A035502F3 /* ResizingTokenField.debug.xcconfig */,
-				6E47CF42EED1808F6C1D6080929D2294 /* ResizingTokenField.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "Example/Pods/Target Support Files/ResizingTokenField";
-			sourceTree = "<group>";
-		};
-		3BA5442AD37A4B2BF20C95D8711D09AB /* Items */ = {
-			isa = PBXGroup;
-			children = (
-				FE61825F9F03AF469FC4821A9CCD44DD /* DefaultTokenCell.swift */,
-				5815D2FA9A8DC0AB7C382A634AA7EC38 /* LabelCell.swift */,
-				F32157344A6364E5B3A32FC1F591186D /* ResizingTokenFieldTokenCell.swift */,
-				D6C7DC07415E6B2746D60F70BC5C15E4 /* TextFieldCell.swift */,
-			);
-			name = Items;
-			path = ResizingTokenField/Classes/Items;
+			path = ResizingTokenField;
 			sourceTree = "<group>";
 		};
 		4F66009C5A177E2E864AC660729D6076 /* Pods-ResizingTokenField_Example */ = {
@@ -199,14 +179,19 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		6EDA4AFDDA9CD89D879B23388EDA52A2 /* Pod */ = {
+		5ACDA95D63E94CBE509759BA2C499BBA /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				80DEC4219BD4F156D7401105C7530593 /* LICENSE */,
-				9909F33DA43E947198E30EF4E1E394B2 /* README.md */,
-				CCC9BBCA9E05078D3A16EAE337EF8DE2 /* ResizingTokenField.podspec */,
+				4F5DBBB73B283F42F5151D68970F72E6 /* ResizingTokenField.modulemap */,
+				16C1650806FC1BC18236E9BF64540A4C /* ResizingTokenField-dummy.m */,
+				4385A693A66DB8C161ED592B70B278B6 /* ResizingTokenField-Info.plist */,
+				9B08004674B630340F50B6168B74F087 /* ResizingTokenField-prefix.pch */,
+				53F4CD0190295DB54BF38531A9ACFF5E /* ResizingTokenField-umbrella.h */,
+				A28B053A58E45F230D7434BB864D6230 /* ResizingTokenField.debug.xcconfig */,
+				F128BE5064AF2AA20C77610D19A6B42F /* ResizingTokenField.release.xcconfig */,
 			);
-			name = Pod;
+			name = "Support Files";
+			path = "../Target Support Files/ResizingTokenField";
 			sourceTree = "<group>";
 		};
 		9FD107307AFF2B57FDF155A83EF68B7C /* Products */ = {
@@ -248,19 +233,11 @@
 			isa = PBXGroup;
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
-				D1D813D6975B1A0719912F1F898E14E3 /* Development Pods */,
 				1628BF05B4CAFDCC3549A101F5A10A17 /* Frameworks */,
+				14D57BFF87CE17DEBB362571F02DE3AD /* Pods */,
 				9FD107307AFF2B57FDF155A83EF68B7C /* Products */,
 				B80722EE136596613AFD32BB0643F9AC /* Targets Support Files */,
 			);
-			sourceTree = "<group>";
-		};
-		D1D813D6975B1A0719912F1F898E14E3 /* Development Pods */ = {
-			isa = PBXGroup;
-			children = (
-				2038056A13BA58D35CC8CD290C362CCA /* ResizingTokenField */,
-			);
-			name = "Development Pods";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -298,7 +275,7 @@
 			buildConfigurationList = F95890C31B2E2AB7810F9F4190900932 /* Build configuration list for PBXNativeTarget "ResizingTokenField" */;
 			buildPhases = (
 				AB0EE4532AA82276E658E4A191026982 /* Headers */,
-				0AAF654915FA1E67CEC59B50D10DE65C /* Sources */,
+				CCB7226C14140AECE3D6DD38DBBA2960 /* Sources */,
 				23E49963A49B1483AED5548D5116533A /* Frameworks */,
 				5B193F2EA64CF390EBAD78BF1A2F90A1 /* Resources */,
 			);
@@ -323,7 +300,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				15101A13AB9B648A1BA26F06A575D143 /* PBXTargetDependency */,
+				4BAD21DEA72557F5644CB15512E89804 /* PBXTargetDependency */,
 			);
 			name = "Pods-ResizingTokenField_Example";
 			productName = "Pods-ResizingTokenField_Example";
@@ -342,7 +319,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				6A05B3D2A43F5E1A1411B967CC59D66D /* PBXTargetDependency */,
+				EA603FD665FF6D0CB58FCA3292E13732 /* PBXTargetDependency */,
 			);
 			name = "Pods-ResizingTokenField_Tests";
 			productName = "Pods-ResizingTokenField_Tests";
@@ -403,24 +380,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		0AAF654915FA1E67CEC59B50D10DE65C /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				6DD7DC7794DEF5D4D3C8EBD0BBF963E2 /* Constants.swift in Sources */,
-				46CE6B41F75AE8AEBF2382A6C7310A26 /* DefaultTokenCell.swift in Sources */,
-				C6664B31871409C7F8E8ADB23A267AD9 /* LabelCell.swift in Sources */,
-				C95FEB984C0B07CE1F3DDFE3BA060BA3 /* ResizingTokenField-dummy.m in Sources */,
-				D20E065580BB4D51B1A01BCE6516DA76 /* ResizingTokenField.swift in Sources */,
-				00C26410E8BADBAE4DBB6DDC8FA12222 /* ResizingTokenFieldDelegate.swift in Sources */,
-				A5BCA45F556B0776D22F9166950CF3CE /* ResizingTokenFieldFlowLayout.swift in Sources */,
-				9BE3923894AE5E2CC92A2A274D3596C2 /* ResizingTokenFieldToken.swift in Sources */,
-				086AC266F23BB989D3E02437C40C2547 /* ResizingTokenFieldTokenCell.swift in Sources */,
-				3DF35520071EFD903110FC2EBAA90044 /* ResizingTokenFieldViewModel.swift in Sources */,
-				51F11BDFF84676CB36F18CC1D859B02C /* TextFieldCell.swift in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		4023EA46A7BD9E858832C5FA16AE850E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -437,27 +396,45 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		CCB7226C14140AECE3D6DD38DBBA2960 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				07DF89EE36D3065A0E4AFFD04BE75586 /* Constants.swift in Sources */,
+				A90201DA92E6E2FAC55A17C70254B54D /* DefaultTokenCell.swift in Sources */,
+				2685E6B253014877B7800459E117C98F /* LabelCell.swift in Sources */,
+				199CA7F90BD5B01E088CD2070120346A /* ResizingTokenField-dummy.m in Sources */,
+				9F5ADD06B141A82A44E4EAB9EA34D34A /* ResizingTokenField.swift in Sources */,
+				BFB5BCB589A6EAAB7AD4A2DBA853BA56 /* ResizingTokenFieldDelegate.swift in Sources */,
+				7CFAAF4C3246668102D18F46B81634E6 /* ResizingTokenFieldFlowLayout.swift in Sources */,
+				FA0451D17F2B6139B58BC99DBE6CFD25 /* ResizingTokenFieldToken.swift in Sources */,
+				A854D9A23108CB83EC54AD6E7B4C6CA8 /* ResizingTokenFieldTokenCell.swift in Sources */,
+				3C905FFE60AF99420ABF71F61CA33D14 /* ResizingTokenFieldViewModel.swift in Sources */,
+				27C7AAD042256107855D24E83BD7271F /* TextFieldCell.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		15101A13AB9B648A1BA26F06A575D143 /* PBXTargetDependency */ = {
+		4BAD21DEA72557F5644CB15512E89804 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = ResizingTokenField;
 			target = 1E8543EAC5D3070BBE5E7C2E020FB0CE /* ResizingTokenField */;
-			targetProxy = E334E0685CB89948751895FA9B62C7C3 /* PBXContainerItemProxy */;
+			targetProxy = B207CDF27AC8EBAEEABDEC3CAAE27E0E /* PBXContainerItemProxy */;
 		};
-		6A05B3D2A43F5E1A1411B967CC59D66D /* PBXTargetDependency */ = {
+		EA603FD665FF6D0CB58FCA3292E13732 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "Pods-ResizingTokenField_Example";
 			target = 8129ADE45CA6E8216152B5D2F6ADBBB3 /* Pods-ResizingTokenField_Example */;
-			targetProxy = B24B5998FFC0D5DC65489953B1605F2B /* PBXContainerItemProxy */;
+			targetProxy = 48A128A38683B3F42F9950A69D1D75F3 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
 		63AD6D2AC346D477F021AF68942F0149 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0105E504D3829CD4EEC8009A035502F3 /* ResizingTokenField.debug.xcconfig */;
+			baseConfigurationReference = A28B053A58E45F230D7434BB864D6230 /* ResizingTokenField.debug.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -686,7 +663,7 @@
 		};
 		AEDA391D3AC2BF71547941B94B3F9652 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 6E47CF42EED1808F6C1D6080929D2294 /* ResizingTokenField.release.xcconfig */;
+			baseConfigurationReference = F128BE5064AF2AA20C77610D19A6B42F /* ResizingTokenField.release.xcconfig */;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_64_BIT)";
 				CLANG_ENABLE_OBJC_WEAK = NO;

@@ -5,7 +5,7 @@ Pod::Spec.new do |s|
   s.homepage              = 'https://github.com/tadejr/ResizingTokenField.git'
   s.license               = { :type => 'MIT', :file => 'LICENSE' }
   s.author                = { 'Tadej Razborsek' => 'razborsek.tadej@gmail.com' }
-  s.source                = { :git => 'https://github.com/tadejr/ResizingTokenField.git', :tag => s.version.to_s }
+  s.source                = { :git => 'https://github.com/cointowitcher/ResizingTokenField', :tag => s.version.to_s }
   s.swift_version         = '5.0'
   s.ios.deployment_target = '13.0'
   s.source_files          = 'ResizingTokenField/Classes/**/*'

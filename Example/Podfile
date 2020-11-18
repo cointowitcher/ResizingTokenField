@@ -1,7 +1,7 @@
 use_frameworks!
 
 target 'ResizingTokenField_Example' do
-  pod 'ResizingTokenField', :path => '../'
+  pod 'ResizingTokenField', :git => 'https://github.com/cointowitcher/ResizingTokenField'
 
   target 'ResizingTokenField_Tests' do
     inherit! :search_paths

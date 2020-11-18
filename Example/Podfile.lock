@@ -2,15 +2,20 @@ PODS:
   - ResizingTokenField (0.1.1)
 
 DEPENDENCIES:
-  - ResizingTokenField (from `../`)
+  - ResizingTokenField (from `https://github.com/cointowitcher/ResizingTokenField`)
 
 EXTERNAL SOURCES:
   ResizingTokenField:
-    :path: "../"
+    :git: https://github.com/cointowitcher/ResizingTokenField
+
+CHECKOUT OPTIONS:
+  ResizingTokenField:
+    :commit: f81f3597bb42da67b5cfd76ea20dab2cf337e019
+    :git: https://github.com/cointowitcher/ResizingTokenField
 
 SPEC CHECKSUMS:
   ResizingTokenField: 2541724726b652a9584d2501ac21d1682e7d034d
 
-PODFILE CHECKSUM: 7958dfeada7c8ae5b245813523ac36fad5139c4b
+PODFILE CHECKSUM: 86c057a849e86155699a457733283c73b5d8f97d
 
 COCOAPODS: 1.10.0
