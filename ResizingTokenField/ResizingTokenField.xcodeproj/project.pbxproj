@@ -109,7 +109,7 @@
 		BE6EBDF822BA74B200B9A872 /* ResizingTokenField */ = {
 			isa = PBXGroup;
 			children = (
-				BE6EBE1A22BA777D00B9A872 /* Token Field */,
+				BE6EBE1A22BA777D00B9A872 /* TokenField */,
 				BE6EBDF922BA74B200B9A872 /* AppDelegate.swift */,
 				BE23A7D522C2AC56009B975D /* Extensions.swift */,
 				BE6EBDFB22BA74B200B9A872 /* FeaturesViewController.swift */,
@@ -134,7 +134,7 @@
 			path = ResizingTokenFieldTests;
 			sourceTree = "<group>";
 		};
-		BE6EBE1A22BA777D00B9A872 /* Token Field */ = {
+		BE6EBE1A22BA777D00B9A872 /* TokenField */ = {
 			isa = PBXGroup;
 			children = (
 				BEE2FB0122C27EF200D0BEE4 /* ResizingTokenFieldDelegate.swift */,
@@ -145,7 +145,7 @@
 				BE6EBE2422BA82EB00B9A872 /* Items */,
 				BEDA6F1522BB90C600E08059 /* Constants.swift */,
 			);
-			path = "Token Field";
+			path = TokenField;
 			sourceTree = "<group>";
 		};
 		BE6EBE2422BA82EB00B9A872 /* Items */ = {

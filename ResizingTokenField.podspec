@@ -8,7 +8,7 @@ Pod::Spec.new do |s|
   s.source                = { :git => 'https://github.com/cointowitcher/ResizingTokenField', :tag => s.version.to_s }
   s.swift_version         = '5.0'
   s.ios.deployment_target = '13.0'
-  s.source_files          = 'ResizingTokenField/Classes/**/*'
+  s.source_files          = 'ResizingTokenField/ResizingTokenField/TokenField/**/*'
   s.frameworks            = 'UIKit'
   s.description           = <<-DESC
   The token field displays an optional label at the start, a multiline list of tokens, and a text field at the end. Tokens can be collapsed into a text description. Internally it uses a collection view which supports insert and delete animations. Tokens can be customized by changing default token font and colors or providing entirely custom collection view cells. Token field provides an intrinsic content height which updates automatically as items are added and removed.

@@ -15,7 +15,6 @@ public protocol DefaultTokenCellConfiguration {
     func borderColor(forSelected isSelected: Bool) -> CGColor
     func textColor(forSelected isSelected: Bool) -> UIColor
     func backgroundColor(forSelected isSelected: Bool) -> UIColor
-    func font(forSelected isSelected: Bool) -> UIFont
 }
 
 class DefaultTokenCell: ResizingTokenFieldTokenCell {
@@ -58,7 +57,6 @@ class DefaultTokenCell: ResizingTokenFieldTokenCell {
         layer.cornerCurve = configuration.cornerCurve(forSelected: isSelected)
         backgroundColor = configuration.backgroundColor(forSelected: isSelected)
         titleLabel.textColor = configuration.textColor(forSelected: isSelected)
-        titleLabel.font = configuration.font(forSelected: isSelected)
     }
     
     var allowSelection: Bool = false
