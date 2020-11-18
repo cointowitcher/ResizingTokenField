@@ -34,8 +34,8 @@ class FeaturesViewController: UIViewController, UITextFieldDelegate, ResizingTok
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        tokenField.layer.borderWidth = 1
-        tokenField.layer.borderColor = UIColor.darkGray.cgColor
+//        tokenField.layer.borderWidth = 1
+//        tokenField.layer.borderColor = UIColor.darkGray.cgColor
         tokenField.preferredTextFieldReturnKeyType = .done
         tokenField.delegate = self
         tokenField.textFieldDelegate = self
@@ -54,6 +54,9 @@ class FeaturesViewController: UIViewController, UITextFieldDelegate, ResizingTok
         ]
         
         tokenField.append(tokens: tokens)
+        tokenField.hideLabel(animated: false)
+        tokenField.maxHeight = 22
+        tokenField.contentInsets = .zero
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -98,11 +101,7 @@ class FeaturesViewController: UIViewController, UITextFieldDelegate, ResizingTok
     }
     
     func resizingTokenField(_ tokenField: ResizingTokenField, configurationForDefaultCellRepresenting token: ResizingTokenFieldToken) -> DefaultTokenCellConfiguration? {
-        if token.title.lowercased() == "custom" {
-            return CustomConfiguration()
-        }
-        
-        return nil
+        return CustomConfiguration()
     }
     
     // MARK: - UITextFieldDelegate
@@ -158,22 +157,30 @@ class FeaturesViewController: UIViewController, UITextFieldDelegate, ResizingTok
 
 struct CustomConfiguration: DefaultTokenCellConfiguration {
     func cornerRadius(forSelected isSelected: Bool) -> CGFloat {
-        return 0
+        return 11
     }
     
     func borderWidth(forSelected isSelected: Bool) -> CGFloat {
-        return 1.0
+        return 0
     }
     
     func borderColor(forSelected isSelected: Bool) -> CGColor {
-        return UIColor.red.cgColor
+        return UIColor.clear.cgColor
     }
     
     func textColor(forSelected isSelected: Bool) -> UIColor {
-        return isSelected ? .green : .red
+        return UIColor(red: 0, green: 0.808, blue: 0.081, alpha: 1)
     }
     
     func backgroundColor(forSelected isSelected: Bool) -> UIColor {
-        return isSelected ? .red : .green
+        return isSelected ? UIColor(red: 0, green: 0.808, blue: 0.081, alpha: 1).withAlphaComponent(0.2) : UIColor(red: 0, green: 0.808, blue: 0.081, alpha: 1).withAlphaComponent(0.1)
+    }
+    
+    func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve {
+        return .continuous
+    }
+    
+    func font(forSelected isSelected: Bool) -> UIFont {
+        .systemFont(ofSize: 15, weight: .semibold)
     }
 }

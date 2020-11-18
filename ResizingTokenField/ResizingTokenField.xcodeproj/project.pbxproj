@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A5DD584A2565533C002AEF42 /* PlusCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A5DD58492565533C002AEF42 /* PlusCell.swift */; };
 		BE23A7D622C2AC56009B975D /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE23A7D522C2AC56009B975D /* Extensions.swift */; };
 		BE6EBDFA22BA74B200B9A872 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6EBDF922BA74B200B9A872 /* AppDelegate.swift */; };
 		BE6EBDFC22BA74B200B9A872 /* FeaturesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BE6EBDFB22BA74B200B9A872 /* FeaturesViewController.swift */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		A5DD58492565533C002AEF42 /* PlusCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlusCell.swift; sourceTree = "<group>"; };
 		BE23A7D522C2AC56009B975D /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		BE6EBDF622BA74B200B9A872 /* ResizingTokenField.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ResizingTokenField.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BE6EBDF922BA74B200B9A872 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -153,6 +155,7 @@
 				BE6EBE2522BA832100B9A872 /* DefaultTokenCell.swift */,
 				BE6EBE2B22BAA37300B9A872 /* TextFieldCell.swift */,
 				BEFFD25522C10FF4001ED71E /* LabelCell.swift */,
+				A5DD58492565533C002AEF42 /* PlusCell.swift */,
 			);
 			path = Items;
 			sourceTree = "<group>";
@@ -272,6 +275,7 @@
 				BE23A7D622C2AC56009B975D /* Extensions.swift in Sources */,
 				BE6EBE2C22BAA37300B9A872 /* TextFieldCell.swift in Sources */,
 				BE6EBDFA22BA74B200B9A872 /* AppDelegate.swift in Sources */,
+				A5DD584A2565533C002AEF42 /* PlusCell.swift in Sources */,
 				BE6EBE1C22BA779A00B9A872 /* ResizingTokenField.swift in Sources */,
 				BE6EBE2A22BA9A5100B9A872 /* ResizingTokenFieldFlowLayout.swift in Sources */,
 			);

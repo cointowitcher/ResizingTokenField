@@ -163,7 +163,7 @@ class FeaturesViewController: UIViewController, UITextFieldDelegate, ResizingTok
 
 struct CustomConfiguration: DefaultTokenCellConfiguration {
     func cornerRadius(forSelected isSelected: Bool) -> CGFloat {
-        return 0
+        return 20
     }
     
     func borderWidth(forSelected isSelected: Bool) -> CGFloat {
@@ -175,10 +175,14 @@ struct CustomConfiguration: DefaultTokenCellConfiguration {
     }
     
     func textColor(forSelected isSelected: Bool) -> UIColor {
-        return isSelected ? .green : .red
+        return UIColor(red: 0, green: 0.808, blue: 0.081, alpha: 1)
     }
     
     func backgroundColor(forSelected isSelected: Bool) -> UIColor {
-        return isSelected ? .red : .green
+        return isSelected ? UIColor(red: 0, green: 0.808, blue: 0.081, alpha: 1).withAlphaComponent(0.2) : UIColor(red: 0, green: 0.808, blue: 0.081, alpha: 1).withAlphaComponent(0.1)
+    }
+    
+    func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve {
+        return .continuous
     }
 }

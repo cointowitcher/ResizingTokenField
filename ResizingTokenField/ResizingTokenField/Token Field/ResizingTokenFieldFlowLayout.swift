@@ -67,12 +67,12 @@ class ResizingTokenFieldFlowLayout: UICollectionViewFlowLayout {
             copiedAttributes.frame.origin.x = sectionInsets.left
         }
         
-        let isLastCell: Bool = indexPath == delegate?.lastCellIndexPath(in: collectionView, layout: self)
-        if isLastCell {
-            // Last cell should stretch to end of the row.
-            let remainingWidth: CGFloat = collectionView.bounds.size.width - copiedAttributes.frame.origin.x - sectionInsets.right
-            copiedAttributes.frame.size.width = remainingWidth
-        }
+//        let isLastCell: Bool = indexPath == delegate?.lastCellIndexPath(in: collectionView, layout: self)
+//        if isLastCell {
+//            // Last cell should stretch to end of the row.
+//            let remainingWidth: CGFloat = collectionView.bounds.size.width - copiedAttributes.frame.origin.x - sectionInsets.right
+//            copiedAttributes.frame.size.width = remainingWidth
+//        }
         
         return copiedAttributes
     }

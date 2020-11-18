@@ -31,6 +31,7 @@ struct Constants {
         static let labelCell: String = "ResizingTokenFieldLabelCell"
         static let tokenCell: String = "ResizingTokenFieldTokenCell"
         static let textFieldCell: String = "ResizingTokenFieldTextFieldCell"
+        static let addCell: String = "ResizingTokenFieldAddCell"
     }
     
 }
@@ -57,5 +58,8 @@ private struct DefaultTokenCellInitialConfiguration: DefaultTokenCellConfigurati
     }
     func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve {
         .continuous
+    }
+    func font(forSelected isSelected: Bool) -> UIFont {
+        .systemFont(ofSize: 15, weight: .semibold)
     }
 }

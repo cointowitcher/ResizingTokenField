@@ -12,7 +12,11 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     /// List of currently displayed tokens.
     var tokens: [ResizingTokenFieldToken] { return viewModel.tokens }
-    
+    var maxHeight: CGFloat? {
+        didSet {
+            collectionView.reloadData()
+        }
+    }
     // MARK: - Configuration
     
     var itemHeight: CGFloat {
@@ -121,6 +125,14 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     /// If `true` tokens will be expanded using animation.
     var shouldExpandTokensAnimated: Bool = true
+    var onPlusButtonClicked: (() -> Void)? {
+        didSet {
+            guard viewModel.shownState != .textField else { return }
+            viewModel.shownState = onPlusButtonClicked == nil ? .none : .add
+            collectionView.reloadData()
+        }
+    }
+    var allowDeletionTags: Bool = false
     
     // MARK: Delegates
     
@@ -189,6 +201,8 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     private func registerCells() {
         collectionView.register(LabelCell.self, forCellWithReuseIdentifier: Constants.Identifier.labelCell)
         collectionView.register(TextFieldCell.self, forCellWithReuseIdentifier: Constants.Identifier.textFieldCell)
+        collectionView.register(PlusCell.self, forCellWithReuseIdentifier: Constants.Identifier.addCell)
+
         
         if let customClass = customCellDelegate?.resizingTokenFieldCustomTokenCellClass(self) {
             collectionView.register(customClass, forCellWithReuseIdentifier: Constants.Identifier.tokenCell)
@@ -367,6 +381,8 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.identifierForCell(atIndexPath: indexPath),
                                                       for: indexPath)
         switch cell {
+        case let plusCell as PlusCell:
+            populate(plusCell: plusCell, atIndexPath: indexPath)
         case let tokenCell as ResizingTokenFieldTokenCell:
             populate(tokenCell: tokenCell, atIndexPath: indexPath)
         case let labelCell as LabelCell:
@@ -381,6 +397,8 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
         return cell
     }
     
+    private func populate(plusCell: PlusCell, atIndexPath indexPath: IndexPath) {}
+    
     private func populate(tokenCell: ResizingTokenFieldTokenCell, atIndexPath indexPath: IndexPath) {
         guard let token = viewModel.token(atIndexPath: indexPath) else {
             tokenCell.onRemove = nil
@@ -391,6 +409,7 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
             defaultTokenCell.titleLabel.font = viewModel.font
             let configuration = delegate?.resizingTokenField(self, configurationForDefaultCellRepresenting: token)
             defaultTokenCell.configuration = configuration ?? Constants.Default.defaultTokenCellConfiguration
+            defaultTokenCell.allowSelection = allowDeletionTags
         }
         
         tokenCell.populate(withToken: token)
@@ -460,8 +479,10 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     // MARK: - UICollectionViewDelegate
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        if let cell = collectionView.cellForItem(at: indexPath) as? ResizingTokenFieldTokenCell {
+        if let cell = collectionView.cellForItem(at: indexPath) as? ResizingTokenFieldTokenCell, allowDeletionTags {
             _ = cell.becomeFirstResponder()
+        } else if collectionView.cellForItem(at: indexPath) as? PlusCell != nil {
+            onPlusButtonClicked?()
         }
     }
     
@@ -483,6 +504,8 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
                 
                 return viewModel.defaultTokenCellSize(forToken: token)
             }
+        case Constants.Identifier.addCell:
+            return viewModel.addCellSize
         default:
             break
         }
@@ -502,6 +525,9 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
         
         delegate?.resizingTokenField(self, willChangeHeight: newHeight)
         heightConstraint?.constant = newHeight
+        if let maxHeight = maxHeight {
+            heightConstraint?.constant = maxHeight
+        }
         delegate?.resizingTokenField(self, didChangeHeight: newHeight)
     }
     
