@@ -8,33 +8,37 @@
 
 import UIKit
 
-struct Constants {
+public struct Constants {
     
-    struct Default {
-        static let animationDuration: TimeInterval = 0.3
-        static let contentInsets: UIEdgeInsets = UIEdgeInsets(top: 6, left: 6, bottom: 6, right: 6)
-        static let font: UIFont = UIFont.systemFont(ofSize: 14)
-        static let itemSpacing: CGFloat = 6
-        static let rowSpacing: CGFloat = 6
-        static let textFieldCellMinWidth: CGFloat = 60
-        static let labelTextColor: UIColor = .darkText
-        static let textFieldTextColor: UIColor = .darkText
-        static let defaultTokenTopBottomPadding: CGFloat = 4
-        static let defaultTokenLeftRightPadding: CGFloat = 8
-        static let defaultTokenCellConfiguration: DefaultTokenCellConfiguration = DefaultTokenCellInitialConfiguration()
+    struct Font {
+        public static var defaultFont: UIFont = UIFont.systemFont(ofSize: 15)
     }
     
-    struct Identifier {
-        static let labelCell: String = "ResizingTokenFieldLabelCell"
-        static let tokenCell: String = "ResizingTokenFieldTokenCell"
-        static let textFieldCell: String = "ResizingTokenFieldTextFieldCell"
+    public struct Default {
+        public static var animationDuration: TimeInterval = 0.3
+        public static var contentInsets: UIEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
+        public static var font: UIFont = UIFont.systemFont(ofSize: 15)
+        public static var itemSpacing: CGFloat = 10
+        public static var textFieldCellMinWidth: CGFloat = 60
+        public static var labelTextColor: UIColor = .darkText
+        public static var textFieldTextColor: UIColor = .darkText
+        public static var defaultTokenTopBottomPadding: CGFloat = 2
+        public static var defaultTokenLeftRightPadding: CGFloat = 12
+        public static var defaultTokenCellConfiguration: DefaultTokenCellConfiguration = DefaultTokenCellInitialConfiguration()
+    }
+    
+    public struct Identifier {
+        public static var labelCell: String = "ResizingTokenFieldLabelCell"
+        public static var tokenCell: String = "ResizingTokenFieldTokenCell"
+        public static var textFieldCell: String = "ResizingTokenFieldTextFieldCell"
+        public static var addCell: String = "ResizingTokenFieldAddCell"
     }
     
 }
 
 private struct DefaultTokenCellInitialConfiguration: DefaultTokenCellConfiguration {
     func cornerRadius(forSelected isSelected: Bool) -> CGFloat {
-        return 8
+        return 5
     }
     
     func borderWidth(forSelected isSelected: Bool) -> CGFloat {
@@ -50,6 +54,12 @@ private struct DefaultTokenCellInitialConfiguration: DefaultTokenCellConfigurati
     }
     
     func backgroundColor(forSelected isSelected: Bool) -> UIColor {
-        return isSelected ? UIColor(red: 200/255, green: 200/255, blue: 200/255, alpha: 1) : UIColor(red: 238/255, green: 238/255, blue: 238/255, alpha: 1)
+        return isSelected ? .gray : .lightGray
+    }
+    func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve {
+        .continuous
+    }
+    func font(forSelected isSelected: Bool) -> UIFont {
+        .systemFont(ofSize: 15, weight: .semibold)
     }
 }

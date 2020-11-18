@@ -10,10 +10,12 @@ import UIKit
 
 public protocol DefaultTokenCellConfiguration {
     func cornerRadius(forSelected isSelected: Bool) -> CGFloat
+    func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve
     func borderWidth(forSelected isSelected: Bool) -> CGFloat
     func borderColor(forSelected isSelected: Bool) -> CGColor
     func textColor(forSelected isSelected: Bool) -> UIColor
     func backgroundColor(forSelected isSelected: Bool) -> UIColor
+    func font(forSelected isSelected: Bool) -> UIFont
 }
 
 class DefaultTokenCell: ResizingTokenFieldTokenCell {
@@ -53,9 +55,13 @@ class DefaultTokenCell: ResizingTokenFieldTokenCell {
         layer.cornerRadius = configuration.cornerRadius(forSelected: isSelected)
         layer.borderWidth = configuration.borderWidth(forSelected: isSelected)
         layer.borderColor = configuration.borderColor(forSelected: isSelected)
+        layer.cornerCurve = configuration.cornerCurve(forSelected: isSelected)
         backgroundColor = configuration.backgroundColor(forSelected: isSelected)
         titleLabel.textColor = configuration.textColor(forSelected: isSelected)
+        titleLabel.font = configuration.font(forSelected: isSelected)
     }
+    
+    var allowSelection: Bool = false
     
     // MARK: - TokenCellItem
 
@@ -64,7 +70,7 @@ class DefaultTokenCell: ResizingTokenFieldTokenCell {
     }
     
     override var isSelected: Bool {
-        didSet { configureWithCurrentConfiguration() }
+        didSet { if allowSelection { configureWithCurrentConfiguration() } }
     }
     
 }

@@ -8,18 +8,18 @@
 
 import UIKit
 
-class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDelegate, ResizingTokenFieldFlowLayoutDelegate {
+open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDelegate, ResizingTokenFieldFlowLayoutDelegate {
     
     /// List of currently displayed tokens.
     var tokens: [ResizingTokenFieldToken] { return viewModel.tokens }
-    var maxHeight: CGFloat? {
+    public var maxHeight: CGFloat? {
         didSet {
             collectionView.reloadData()
         }
     }
     // MARK: - Configuration
     
-    var itemHeight: CGFloat {
+    public var itemHeight: CGFloat {
         get { return viewModel.itemHeight }
         set {
             viewModel.customItemHeight = newValue
@@ -28,37 +28,37 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     }
     
     /// Insets of the internal collection view layout.
-    var contentInsets: UIEdgeInsets = Constants.Default.contentInsets {
+    public var contentInsets: UIEdgeInsets = Constants.Default.contentInsets {
         didSet {
             (collectionView.collectionViewLayout as? ResizingTokenFieldFlowLayout)?.sectionInset = contentInsets
         }
     }
     
     /// Spacing between items.
-    var itemSpacing: CGFloat = Constants.Default.itemSpacing {
+    public var itemSpacing: CGFloat = Constants.Default.itemSpacing {
         didSet {
             (collectionView.collectionViewLayout as? ResizingTokenFieldFlowLayout)?.minimumInteritemSpacing = itemSpacing
         }
     }
     
     /// Font used by the token field.
-    var font: UIFont {
+    public var font: UIFont {
         get { return viewModel.font }
         set { viewModel.font = newValue }
     }
     
     // MARK: Label
     
-    var isShowingLabel: Bool { return viewModel.isShowingLabelCell }
+    public var isShowingLabel: Bool { return viewModel.isShowingLabelCell }
     
     /// Text to display in the label at the start.
-    var labelText: String? {
+    public var labelText: String? {
         get { return viewModel.labelCellText }
         set { viewModel.labelCellText = newValue }
     }
     
     /// Text color of the label at the start.
-    var labelTextColor: UIColor = Constants.Default.labelTextColor {
+    public var labelTextColor: UIColor = Constants.Default.labelTextColor {
         didSet {
             if viewModel.isShowingLabelCell {
                 collectionView.reloadItems(at: [viewModel.labelCellIndexPath])
@@ -70,35 +70,35 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     /// Reference to the current text field instance, or nil if no text field is loaded.
     /// The internal collection view cell for this text field is reloaded as few times as possible, but this reference might still change.
-    var textField: UITextField? { return (collectionView.cellForItem(at: viewModel.textFieldCellIndexPath) as? TextFieldCell)?.textField }
+    public var textField: UITextField? { return (collectionView.cellForItem(at: viewModel.textFieldCellIndexPath) as? TextFieldCell)?.textField }
     
     /// Text color for the text field.
-    var textFieldTextColor: UIColor = Constants.Default.textFieldTextColor {
+    public var textFieldTextColor: UIColor = Constants.Default.textFieldTextColor {
         didSet { textField?.textColor = textFieldTextColor }
     }
     
     /// Set to true to make text field first responder immediately after it loads.
     /// If `textField` returns a non-nil value it should be used instead of this flag.
-    var makeTextFieldFirstResponderImmediately: Bool = false
+    public var makeTextFieldFirstResponderImmediately: Bool = false
     
     /// Minimum allowed width of the text field. Will be stretched to the end of the last row.
-    var textFieldMinWidth: CGFloat {
+    public var textFieldMinWidth: CGFloat {
         get { return viewModel.textFieldCellMinWidth }
         set { viewModel.textFieldCellMinWidth = newValue }
     }
     
     /// Text field return key type.
-    var preferredTextFieldReturnKeyType: UIReturnKeyType = .default {
+    public var preferredTextFieldReturnKeyType: UIReturnKeyType = .default {
         didSet { textField?.returnKeyType = preferredTextFieldReturnKeyType }
     }
     
     /// Placeholder shown by the text field.
-    var placeholder: String? {
+    public var placeholder: String? {
         didSet { textField?.placeholder = placeholder }
     }
     
     /// Use to get/set currently displayed text.
-    var text: String? {
+    public var text: String? {
         get { return cachedText ?? textField?.text }
         set {
             if let textField = self.textField {
@@ -114,33 +114,33 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     // MARK: Animation
     
     /// Duration of all animations performed by the token field.
-    var animationDuration: TimeInterval = Constants.Default.animationDuration
+    public var animationDuration: TimeInterval = Constants.Default.animationDuration
     
     /// Use to control animation when tokens are removed due to text input.
     /// For example, if user taps backspace while a token is selected.
-    var shouldTextInputRemoveTokensAnimated: Bool = true
+    public var shouldTextInputRemoveTokensAnimated: Bool = true
     
     /// If `true` tokens will be collapsed using animation.
-    var shouldCollapseTokensAnimated: Bool = true
+    public var shouldCollapseTokensAnimated: Bool = true
     
     /// If `true` tokens will be expanded using animation.
-    var shouldExpandTokensAnimated: Bool = true
-    var onPlusButtonClicked: (() -> Void)? {
+    public var shouldExpandTokensAnimated: Bool = true
+    public var onPlusButtonClicked: (() -> Void)? {
         didSet {
             guard viewModel.shownState != .textField else { return }
             viewModel.shownState = onPlusButtonClicked == nil ? .none : .add
             collectionView.reloadData()
         }
     }
-    var allowDeletionTags: Bool = false
+    public var allowDeletionTags: Bool = false
     
     // MARK: Delegates
     
-    weak var delegate: ResizingTokenFieldDelegate?
-    weak var customCellDelegate: ResizingTokenFieldCustomCellDelegate? {
+    public weak var delegate: ResizingTokenFieldDelegate?
+    public weak var customCellDelegate: ResizingTokenFieldCustomCellDelegate? {
         didSet { registerCells() }
     }
-    weak var textFieldDelegate: UITextFieldDelegate? {
+    public weak var textFieldDelegate: UITextFieldDelegate? {
         didSet { textField?.delegate = textFieldDelegate }
     }
     
@@ -217,23 +217,23 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     /// Use to invalidate the internal collection view layout.
     /// For example, use this to handle rotation change.
-    func invalidateLayout() {
+    public func invalidateLayout() {
         collectionView.collectionViewLayout.invalidateLayout()
     }
     
     /// Use to reload the internal collection view data.
-    func reloadData() {
+    public func reloadData() {
         collectionView.reloadData()
     }
     
     // MARK: - First responder
     
-    override func becomeFirstResponder() -> Bool {
+    public override func becomeFirstResponder() -> Bool {
         super.becomeFirstResponder()
         return textField?.becomeFirstResponder() == true
     }
     
-    override func resignFirstResponder() -> Bool {
+    public override func resignFirstResponder() -> Bool {
         super.resignFirstResponder()
         if let textField = self.textField, textField.isFirstResponder {
             return textField.resignFirstResponder()
@@ -251,11 +251,11 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     // MARK: - Toggle label
     
-    func showLabel(animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
+    public func showLabel(animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
         toggleLabelCell(visible: true, animated: animated, completion: completion)
     }
     
-    func hideLabel(animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
+    public func hideLabel(animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
         toggleLabelCell(visible: false, animated: animated, completion: completion)
     }
     
@@ -287,26 +287,26 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     // MARK: - Add/remove tokens
     
-    func append(tokens: [ResizingTokenFieldToken], animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
+    public func append(tokens: [ResizingTokenFieldToken], animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
         let newIndexPaths = viewModel.append(tokens: tokens)
         insertItems(atIndexPaths: newIndexPaths, animated: animated, completion: completion)
     }
     
     /// Remove provided tokens, if they are in the token field.
-    func remove(tokens: [ResizingTokenFieldToken], animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
+    public func remove(tokens: [ResizingTokenFieldToken], animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
         let removedIndexPaths = viewModel.remove(tokens: tokens)
         removeItems(atIndexPaths: removedIndexPaths, animated: animated, completion: completion)
     }
     
     /// Remove tokens at provided indexes, if they are in the token field.
     /// This function is faster than `remove(tokens:)`.
-    func remove(tokensAtIndexes indexes: IndexSet, animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
+    public func remove(tokensAtIndexes indexes: IndexSet, animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
         let removedIndexPaths = viewModel.remove(tokensAtIndexes: indexes)
         removeItems(atIndexPaths: removedIndexPaths, animated: animated, completion: completion)
     }
     
     /// Removes all tokens.
-    func removeAllTokens(animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
+    public func removeAllTokens(animated: Bool = false, completion: ((_ finished: Bool) -> Void)? = nil) {
         let removedIndexPaths = viewModel.removeAllTokens()
         removeItems(atIndexPaths: removedIndexPaths, animated: animated, completion: completion)
     }
@@ -372,12 +372,12 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     // MARK: - UICollectionViewDataSource
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    public func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         isCollectionViewLoaded = true
         return viewModel.numberOfItems
     }
     
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+    public func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: viewModel.identifierForCell(atIndexPath: indexPath),
                                                       for: indexPath)
         switch cell {
@@ -478,7 +478,7 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     // MARK: - UICollectionViewDelegate
     
-    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    public func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         if let cell = collectionView.cellForItem(at: indexPath) as? ResizingTokenFieldTokenCell, allowDeletionTags {
             _ = cell.becomeFirstResponder()
         } else if collectionView.cellForItem(at: indexPath) as? PlusCell != nil {
@@ -488,7 +488,7 @@ class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionViewDe
     
     // MARK: - UICollectionViewDelegateFlowLayout
     
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+    public func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let identifier = viewModel.identifierForCell(atIndexPath: indexPath)
         switch identifier {
         case Constants.Identifier.labelCell:

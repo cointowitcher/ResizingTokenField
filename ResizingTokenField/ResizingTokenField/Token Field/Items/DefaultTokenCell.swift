@@ -8,7 +8,7 @@
 
 import UIKit
 
-protocol DefaultTokenCellConfiguration {
+public protocol DefaultTokenCellConfiguration {
     func cornerRadius(forSelected isSelected: Bool) -> CGFloat
     func cornerCurve(forSelected isSelected: Bool) -> CALayerCornerCurve
     func borderWidth(forSelected isSelected: Bool) -> CGFloat

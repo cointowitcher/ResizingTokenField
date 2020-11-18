@@ -29,7 +29,6 @@ class LabelCell: UICollectionViewCell {
     }
     
     private func setUp() {
-        isUserInteractionEnabled = false
         addSubview(label)
         
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -38,3 +37,4 @@ class LabelCell: UICollectionViewCell {
     }
     
 }
+

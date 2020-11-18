@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ResizingTokenFieldToken {
+public protocol ResizingTokenFieldToken {
     
     /// Title displayed on the token.
     var title: String { get }
@@ -18,7 +18,7 @@ protocol ResizingTokenFieldToken {
     
 }
 
-extension ResizingTokenFieldToken where Self: Equatable {
+public extension ResizingTokenFieldToken where Self: Equatable {
     
     func isEqual(to token: ResizingTokenFieldToken) -> Bool {
         guard let token = token as? Self else { return false }

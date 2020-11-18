@@ -14,18 +14,18 @@ class ResizingTokenFieldViewModel {
     // MARK: - Font
     
     /// Font used by all labels.
-    var font: UIFont = Constants.Default.font {
+    var font: UIFont = Constants.Font.defaultFont {
         didSet { defaultItemHeight = ceil(font.lineHeight) + 2 * Constants.Default.defaultTokenTopBottomPadding }
     }
     
     /// Height of items.
-    var defaultItemHeight: CGFloat = ceil(Constants.Default.font.lineHeight) + 2 * Constants.Default.defaultTokenTopBottomPadding
+    var defaultItemHeight: CGFloat = ceil(Constants.Font.defaultFont.lineHeight) + 2 * Constants.Default.defaultTokenTopBottomPadding
     var customItemHeight: CGFloat?
     var itemHeight: CGFloat { return customItemHeight ?? defaultItemHeight }
     
     // MARK: - Label cell
     
-    var isShowingLabelCell: Bool = true
+    var isShowingLabelCell: Bool = false
     var labelCellText: String?
     
     var labelCellIndexPath: IndexPath {
@@ -36,10 +36,25 @@ class ResizingTokenFieldViewModel {
         return CGSize(width: LabelCell.width(forText: labelCellText, font: font),
                       height: itemHeight)
     }
+    var addCellSize: CGSize {
+        return CGSize(width: 22, height: 22)
+    }
     
     // MARK: - Text field cell
+    enum ShownState {
+        case textField
+        case add
+        case none
+    }
+    
+    var shownState: ShownState = .none
     
     var textFieldCellIndexPath: IndexPath {
+        // The last cell
+        return IndexPath(item: numberOfItems - 1, section: 0)
+    }
+    
+    var addCellIndexPath: IndexPath {
         // The last cell
         return IndexPath(item: numberOfItems - 1, section: 0)
     }
@@ -159,8 +174,9 @@ class ResizingTokenFieldViewModel {
     // MARK: - Data source
     
     var numberOfItems: Int {
-        var count = tokensToDisplayCount + 1    // Tokens + text field cell
-        if isShowingLabelCell { count += 1 }    // Label cell
+        var count = tokensToDisplayCount
+        if shownState == .add || shownState == .textField { count += 1 } // text field cell or add cell
+        if isShowingLabelCell { count += 1 } // Label cell
         return count
     }
     
@@ -168,8 +184,10 @@ class ResizingTokenFieldViewModel {
         switch indexPath.item {
         case (isShowingLabelCell ? labelCellIndexPath.item : nil):
             return Constants.Identifier.labelCell
-        case textFieldCellIndexPath.item:
+        case (shownState == .textField ? textFieldCellIndexPath.item : nil):
             return Constants.Identifier.textFieldCell
+        case (shownState == .add ? addCellIndexPath.item : nil):
+            return Constants.Identifier.addCell
         default:
             return Constants.Identifier.tokenCell
         }

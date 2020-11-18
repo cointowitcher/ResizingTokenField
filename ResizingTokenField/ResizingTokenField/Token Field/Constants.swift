@@ -8,30 +8,30 @@
 
 import UIKit
 
-struct Constants {
+public struct Constants {
     
     struct Font {
-        static let defaultFont: UIFont = UIFont.systemFont(ofSize: 15)
+        public static var defaultFont: UIFont = UIFont.systemFont(ofSize: 15)
     }
     
-    struct Default {
-        static let animationDuration: TimeInterval = 0.3
-        static let contentInsets: UIEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
-        static let font: UIFont = UIFont.systemFont(ofSize: 15)
-        static let itemSpacing: CGFloat = 10
-        static let textFieldCellMinWidth: CGFloat = 60
-        static let labelTextColor: UIColor = .darkText
-        static let textFieldTextColor: UIColor = .darkText
-        static let defaultTokenTopBottomPadding: CGFloat = 2
-        static let defaultTokenLeftRightPadding: CGFloat = 12
-        static let defaultTokenCellConfiguration: DefaultTokenCellConfiguration = DefaultTokenCellInitialConfiguration()
+    public struct Default {
+        public static var animationDuration: TimeInterval = 0.3
+        public static var contentInsets: UIEdgeInsets = UIEdgeInsets(top: 4, left: 8, bottom: 4, right: 8)
+        public static var font: UIFont = UIFont.systemFont(ofSize: 15)
+        public static var itemSpacing: CGFloat = 10
+        public static var textFieldCellMinWidth: CGFloat = 60
+        public static var labelTextColor: UIColor = .darkText
+        public static var textFieldTextColor: UIColor = .darkText
+        public static var defaultTokenTopBottomPadding: CGFloat = 2
+        public static var defaultTokenLeftRightPadding: CGFloat = 12
+        public static var defaultTokenCellConfiguration: DefaultTokenCellConfiguration = DefaultTokenCellInitialConfiguration()
     }
     
-    struct Identifier {
-        static let labelCell: String = "ResizingTokenFieldLabelCell"
-        static let tokenCell: String = "ResizingTokenFieldTokenCell"
-        static let textFieldCell: String = "ResizingTokenFieldTextFieldCell"
-        static let addCell: String = "ResizingTokenFieldAddCell"
+    public struct Identifier {
+        public static var labelCell: String = "ResizingTokenFieldLabelCell"
+        public static var tokenCell: String = "ResizingTokenFieldTokenCell"
+        public static var textFieldCell: String = "ResizingTokenFieldTextFieldCell"
+        public static var addCell: String = "ResizingTokenFieldAddCell"
     }
     
 }
