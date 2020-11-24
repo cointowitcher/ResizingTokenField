@@ -147,7 +147,7 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
     // MARK: - Initialization
     
     let viewModel: ResizingTokenFieldViewModel = ResizingTokenFieldViewModel()
-    private let collectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: ResizingTokenFieldFlowLayout())
+    public let collectionView: UICollectionView = UICollectionView(frame: .zero, collectionViewLayout: ResizingTokenFieldFlowLayout())
     
     /// Tracks when the initial collection view load is performed.
     /// This flag is used to prevent crashes from trying to insert/delete items before the initial load.
@@ -159,7 +159,7 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
     /// Height constraint of the collection view. This constraint's constant is updated as collection view resizes.
     private var heightConstraint: NSLayoutConstraint?
     
-    public required init?(coder aDecoder: NSCoder) {
+    required public init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         initialize()
     }
@@ -311,6 +311,11 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
         removeItems(atIndexPaths: removedIndexPaths, animated: animated, completion: completion)
     }
     
+    public func removeAll() {
+        viewModel.tokens = []
+        collectionView.reloadData()
+    }
+    
     private func insertItems(atIndexPaths indexPaths: [IndexPath], animated: Bool, completion: ((_ finished: Bool) -> Void)?) {
         guard isCollectionViewLoaded, !indexPaths.isEmpty else {
             updateCollapsedTextIfNeeded()
@@ -324,9 +329,7 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
                 self.collectionView.insertItems(at: indexPaths)
             }, completion: completion)
         } else {
-            UIView.performWithoutAnimation {
-                collectionView.insertItems(at: indexPaths)
-            }
+            collectionView.reloadData()
             completion?(true)
         }
     }
@@ -415,7 +418,7 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
         tokenCell.populate(withToken: token)
         tokenCell.onRemove = { [weak self] (text) in
             guard let self = self else { return }
-            guard self.delegate?.resizingTokenField(self, shouldRemoveToken: token) != false else { return }
+            guard text == nil && self.delegate?.resizingTokenField(self, shouldRemoveToken: token) != false else { return }
             self.remove(tokens: [token], animated: self.shouldTextInputRemoveTokensAnimated)
             _ = self.textField?.becomeFirstResponder()
             self.text = text
@@ -525,9 +528,6 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
         
         delegate?.resizingTokenField(self, willChangeHeight: newHeight)
         heightConstraint?.constant = newHeight
-        if let maxHeight = maxHeight {
-            heightConstraint?.constant = maxHeight
-        }
         delegate?.resizingTokenField(self, didChangeHeight: newHeight)
     }
     
