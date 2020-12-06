@@ -153,9 +153,6 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
     /// This flag is used to prevent crashes from trying to insert/delete items before the initial load.
     private var isCollectionViewLoaded: Bool = false
     
-    /// Tracks when initial height is set. That height change does not notify the delegate.
-    private var didSetInitialHeight: Bool = false
-    
     /// Height constraint of the collection view. This constraint's constant is updated as collection view resizes.
     private var heightConstraint: NSLayoutConstraint?
     
@@ -519,13 +516,7 @@ open class ResizingTokenField: UIView, UICollectionViewDataSource, UICollectionV
     
     // MARK: - ResizingTokenFieldFlowLayoutDelegate
     
-    func collectionView(_ collectionView: UICollectionView, layout: ResizingTokenFieldFlowLayout, heightDidChange newHeight: CGFloat) {
-        guard didSetInitialHeight else {
-            didSetInitialHeight = true
-            heightConstraint?.constant = newHeight
-            return
-        }
-        
+    func collectionView(_ collectionView: UICollectionView, layout: ResizingTokenFieldFlowLayout, heightDidChange newHeight: CGFloat) {        
         delegate?.resizingTokenField(self, willChangeHeight: newHeight)
         heightConstraint?.constant = newHeight
         delegate?.resizingTokenField(self, didChangeHeight: newHeight)
